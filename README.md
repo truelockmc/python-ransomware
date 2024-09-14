@@ -15,7 +15,7 @@ This repository contains Python scripts designed for encrypting and decrypting f
 
 This script performs the following actions:
 - Generates an encryption key.
-- Encrypts all files in the user's Desktop, Documents, Downloads, OneDrive, and Pictures directories.
+- Encrypts all files in the user's Desktop, Documents, Downloads, OneDrive, and Pictures directories/or every File in the same Folder and Subfolders, depends which script your using.
 - Sends encryption details (key, file count, folder count) to a Discord webhook.
 - Displays a notification with the path to a file containing an identifier code.
 
@@ -54,8 +54,8 @@ python Decrypt.py
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/your-repository.git
-   cd your-repository
+   git clone https://github.com/truelockmc/python-ransomware.git
+   cd python-ransomware
    ```
 
 2. **Install Dependencies**
