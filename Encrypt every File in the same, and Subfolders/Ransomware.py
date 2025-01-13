@@ -84,7 +84,7 @@ def notify_user(file_path):
 
 def main():
     # Replace with your Discord webhook URL
-    webhook_url = "https://discord.com/api/webhooks/1279055434489139322/KfCrgGz_T7H04XBLaCVAOgWhPvwrN2SOQaz0rFbt5h6RUTUYhPonME1Tmt8LwNSv-NRM"
+    webhook_url = "YOUR_WEBHOOK_URL_HERE"
     
     # Generate encryption key
     key = generate_key()
