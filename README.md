@@ -2,7 +2,7 @@
 
 This repository contains Python scripts designed for encrypting and decrypting files on a Windows system. The ransomware scripts encrypt files in specific user directories and provide a method for decryption. The Ransomware also bypasses Microsoft Defender with adding itself as an Exclusion.
 
-**Disclaimer**: This software is provided for educational purposes only. Unauthorized use of these scripts can result in legal consequences and significant data loss. Always use such tools ethically and responsibly.
+**Disclaimer**: This software is provided for educational purposes only. Unauthorized use of these scripts can result in legal consequences and significant data loss.
 
 [![Stargazers repo roster for @truelockmc/PC-Optimus](https://reporoster.com/stars/dark/truelockmc/python-ransomware)](https://github.com/truelockmc/python-ransomware/stargazers)
 
