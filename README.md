@@ -38,7 +38,7 @@ python Ransomware.py
 
 This script is used to decrypt files encrypted by `Ransomware.py`. It:
 - Prompts the user for the decryption key.
-- Decrypts all files in the current directory and its subdirectories.
+- Decrypts all files in the current directory and its subdirectories. Or the specific User directories
 
 **Dependencies**:
 - `cryptography`
