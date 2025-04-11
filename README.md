@@ -4,6 +4,8 @@ This repository contains Python scripts designed for encrypting and decrypting f
 
 **Disclaimer**: This software is provided for educational purposes only. Unauthorized use of these scripts can result in legal consequences and significant data loss. Always use such tools ethically and responsibly.
 
+[![Stargazers repo roster for @truelockmc/PC-Optimus](https://reporoster.com/stars/dark/truelockmc/python-ransomware)](https://github.com/truelockmc/python-ransomware/stargazers)
+
 ## Contents
 
 1. **Ransomware.py**: Encrypts files in specified user directories and sends encryption details to a Discord webhook.
